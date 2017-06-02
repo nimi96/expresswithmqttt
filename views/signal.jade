@@ -1,0 +1,214 @@
+extends alayout
+
+
+block content
+   
+
+   body
+   script(src='https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js')
+   h1(align="center")  Traffic lights
+
+    table(   cellspacing="100" )
+      td
+        #wrap1 
+        .abc 
+
+          table
+            tr
+              td(colspan='2')
+                h1 road1
+            tr
+              td
+                img(src='/images/red.png', width='60', height='60')
+            tr
+              td
+                img(src='/images/yello.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/up.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/left.jpg', width='60', height='60')
+              td
+                img(src='/images/right.jpg', width='60', height='60')
+            
+            tr
+              td
+                img(src='/images/stand.jpg', width='60', height='60')
+              td
+                img(src='/images/walk.jpg', width='60', height='60')
+
+
+            tr
+              td
+                img(src='/images/black.png', width='60', height='60')
+              td
+                img(src='/images/black.png', width='60', height='60')                
+            tr
+              td(colspan='2')
+                input(type='text', value='uid1')
+
+      td
+        #wrap2
+          table
+            tr
+              td(colspan='2')
+                h1 road2
+            tr
+              td
+                img(src='/images/red.png', width='60', height='60')
+            tr
+              td
+                img(src='/images/yello.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/up.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/left.jpg', width='60', height='60')
+              td
+                img(src='/images/right.jpg', width='60', height='60')
+
+             tr
+              td
+                img(src='/images/stand.jpg', width='60', height='60')
+              td
+                img(src='/images/walk.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/black.png', width='60', height='60')
+              td
+                img(src='/images/black.png', width='60', height='60')                
+            tr
+              td(colspan='2')
+                input(type='text', value='uid2')
+      td
+        #wrap3
+          table
+            tr
+              td(colspan='2')
+                h1 road3
+            tr
+              td
+                img(src='/images/red.png', width='60', height='60')
+            tr
+              td
+                img(src='/images/yello.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/up.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/left.jpg', width='60', height='60')
+              td
+                img(src='/images/right.jpg', width='60', height='60')
+
+             tr
+              td
+                img(src='/images/stand.jpg', width='60', height='60')
+              td
+                img(src='/images/walk.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/black.png', width='60', height='60')
+              td
+                img(src='/images/black.png', width='60', height='60')                
+            tr
+              td(colspan='2')
+                input(type='text', value='uid3')
+       td
+        #wrap4
+          table
+            tr
+              td(colspan='2')
+                h1 road4
+            tr
+              td
+                img(src='/images/red.png', width='60', height='60')
+            tr
+              td
+                img(src='/images/yello.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/up.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/left.jpg', width='60', height='60')
+              td
+                img(src='/images/right.jpg', width='60', height='60')
+
+             tr
+              td
+                img(src='/images/stand.jpg', width='60', height='60')
+              td
+                img(src='/images/walk.jpg', width='60', height='60')
+            tr
+              td
+                img(src='/images/black.png', width='60', height='60')
+              td
+                img(src='/images/black.png', width='60', height='60')                
+            tr
+              td(colspan='2')
+                input(type='text', value='uid4')                
+
+    input(type='button',value='redlight' onclick='redlight()')
+    br
+    input(type='button',value='greenlight' onclick='greenlight()')
+
+    
+    script.
+
+      alert("hello");
+      
+      function redlight() {
+      
+      var abc;
+
+      abc=document.getElementById("wrap1").getElementsByTagName("td");
+      console.log(abc[1].innerHTML="<img src='/images/red.jpg'  width='60', height='60' >");
+      console.log(abc[2].innerHTML="<img src='/images/yello_off.jpg'  width='60', height='60' >");
+      console.log(abc[3].innerHTML="<img src='/images/gree.jpg'  width='60', height='60' >");
+      console.log(abc[4].innerHTML="<img src='/images/left_of.png'  width='60', height='60' >");
+      console.log(abc[5].innerHTML="<img src='/images/right_of.png'  width='60', height='60' >");
+      
+      console.log(abc[6].innerHTML="<img src='/images/walk_on1.jpg'  width='60', height='60' >");
+      console.log(abc[7].innerHTML="<img src='/images/stand.jpg'  width='60', height='60' >");
+
+      }
+
+       function greenlight() {
+      
+      var xyz;
+
+      xyz=document.getElementById("wrap1").getElementsByTagName("td");
+      console.log(xyz[1].innerHTML="<img src='/images/red.png'  width='60', height='60' >");
+      console.log(xyz[2].innerHTML="<img src='/images/yello_off.jpg'  width='60', height='60' >");
+      console.log(xyz[3].innerHTML="<img src='/images/walk.jpg'  width='60', height='60' >");
+      console.log(xyz[4].innerHTML="<img src='/images/left_of.png'  width='60', height='60' >");
+      console.log(xyz[5].innerHTML="<img src='/images/right_of.png'  width='60', height='60' >");
+      console.log(xyz[6].innerHTML="<img src='/images/walk_on1.jpg'  width='60', height='60' >");
+      console.log(xyz[7].innerHTML="<img src='/images/stand.jpg'  width='60', height='60' >");
+
+      }
+    
+       console.log(this.name);
+
+  
+   
+   
+      
+      
+      
+      
+
+      
+      
+
+      
+    
+
+
+
+
+
+   
